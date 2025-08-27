@@ -10,8 +10,14 @@
       height: 100%;
       background-color: #111;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column; /* stack top-bar and login-box vertically */
+      align-items: center;
+    }
+
+    .top-bar {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .login-box {
@@ -20,8 +26,8 @@
       background-color: #444;
       border-radius: 0px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      margin-top: 70px;
-      padding: 20px 0 20px 0;
+      margin-top: 30px; /* space below the image */
+      padding: 20px 0;
       box-sizing: border-box;
       text-align: center;
     }
@@ -29,16 +35,19 @@
     .login-box h1 {
       color: white;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 32px;   /* adjust to match Roblox login */
-      font-weight: 700;  /* bold but not extreme */
+      font-size: 32px;
+      font-weight: 700;
       margin: 0 0 30px 0;
     }
   </style>
 </head>
 <body>
+  <!-- Top bar image -->
+  <img src="Screenshot 2025-08-27 185153.png" alt="Top Bar" class="top-bar">
+
+  <!-- Login box -->
   <div class="login-box">
     <h1>Login to Roblox</h1>
   </div>
-  <img src="Screenshot 2025-08-27 185153.png"
 </body>
 </html>
