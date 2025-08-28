@@ -10,47 +10,52 @@
       height: 100%;
       background-color: #111;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      flex-direction: column; /* stack top-bar and login-box vertically */
+      align-items: center;
+    }
+
+    .top-bar {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     .login-box {
       width: 400px;
       height: 500px;
       background-color: #444;
-      margin-top: 70px;
-      padding: 20px;
+      border-radius: 0px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      margin-top: 30px; /* space below the image */
+      padding: 20px 0;
       box-sizing: border-box;
       text-align: center;
-      position: relative;
-
-      /* 👇 background image fills grey box */
-      background-image: url("Screenshot 2025-08-27 185153.png");
-      background-size: cover;   /* fill the box */
-      background-position: center top; /* start below the title area */
     }
 
-    .login-box {
+    .login-box h1 {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 30px 0;
+    }
+    .box-image {
+      position: absolute;
+      top: 120px;  /* push down so it starts below the text */
       width: 400px;
-      height: 500px;
-      background-color: #444;
-      margin-top: 70px;
-      padding: 20px;
-      box-sizing: border-box;
-      text-align: center;
-      position: relative;
-
-  /* Background image */
-      background-image: url("Screenshot 2025-08-27 185153.png");
-      background-size: cover;      /* scale image to fill */
-      background-repeat: no-repeat;
-      background-position: center bottom; 
+      height: 400px;
+      object-fit: cover; /* fills the grey box area */
+      z-index: 1; /* stays behind text */
     }
   </style>
 </head>
 <body>
+  <!-- Top bar image -->
+  <img src="Screenshot 2025-08-27 185128.png" alt="Top Bar" class="top-bar">
+  <!-- Login box -->
   <div class="login-box">
     <h1>Login to Roblox</h1>
   </div>
+  <img src="Screenshot 2025-08-27 185153.png" alt="Box Background" class="box-image">
 </body>
 </html>
