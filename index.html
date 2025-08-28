@@ -41,12 +41,12 @@
       font-size: 32px;
       font-weight: 700;
       margin: 0 0 20px 0; /* space below heading */
+      flex-shrink: 0; /* heading keeps its height */
     }
 
     .box-image {
       width: 100%;
-      height: auto;
-      max-height: 350px; /* leaves some space above for box color */
+      flex-grow: 1; /* fills all remaining space below heading */
       object-fit: cover;
     }
   </style>
