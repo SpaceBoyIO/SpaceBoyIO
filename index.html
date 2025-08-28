@@ -13,6 +13,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .top-bar {
@@ -25,27 +26,25 @@
       width: 400px;
       height: 500px;
       background-color: #444;
-      border-radius: 0px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow: hidden; /* ensures image doesn't overflow the box */
+      overflow: hidden;
+      color: white; /* ensures all text inside is white */
     }
 
     .login-box h1 {
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 32px;
       font-weight: 700;
-      margin: 20px 0; /* spacing above and below heading */
-      z-index: 1;
+      margin: 20px 0; /* space above and below heading */
+      z-index: 2; /* keep above the image if needed */
     }
 
     .box-image {
       width: 100%;
-      flex-grow: 1; /* fill remaining space */
+      flex-grow: 1; /* fills remaining space */
       object-fit: cover;
     }
   </style>
