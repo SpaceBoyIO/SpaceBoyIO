@@ -41,11 +41,12 @@
     }
     .floating-img {
       position: absolute;
-      top: 65px;       /* distance below the text */
+      top: 65px;             /* distance below text */
       left: 50%;
       transform: translateX(-50%);
-      width: 120px;    /* fixed smaller size */
-      height: auto;
+      width: 120px;          /* force small width */
+      max-width: 120px;      /* never exceed this */
+      height: auto;          /* keep proportions */
     }
   </style>
 </head>
