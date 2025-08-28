@@ -25,26 +25,28 @@
     .login-box {
       width: 400px;
       height: 500px;
-      background-color: #262930;
+      background-color: #262930; /* Box color */
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       margin-top: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
       overflow: hidden;
-      color: white; /* ensures all text inside is white */
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     .login-box h1 {
       font-size: 32px;
       font-weight: 700;
-      margin: 20px 0; /* space above and below heading */
-      z-index: 2; /* keep above the image if needed */
+      margin: 0 0 20px 0; /* space below heading */
     }
 
     .box-image {
       width: 100%;
-      flex-grow: 1; /* fills remaining space */
+      height: auto;
+      max-height: 350px; /* leaves some space above for box color */
       object-fit: cover;
     }
   </style>
