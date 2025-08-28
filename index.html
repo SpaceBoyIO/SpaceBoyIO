@@ -10,26 +10,21 @@
       height: 100%;
       background-color: #111;
       display: flex;
-      flex-direction: column; /* stack top-bar and login-box vertically */
-      align-items: center;
-    }
-
-    .top-bar {
-      width: 100%;
-      height: auto;
-      display: block;
+      justify-content: center;
+      align-items: flex-start;
     }
 
     .login-box {
       width: 400px;
       height: 500px;
       background-color: #444;
-      border-radius: 0px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      margin-top: 30px; /* space below the image */
-      padding: 20px 0;
+      margin-top: 70px;
+      padding: 20px;
       box-sizing: border-box;
       text-align: center;
+      position: relative;
+      z-index: 2; /* keeps text above image */
     }
 
     .login-box h1 {
@@ -37,8 +32,9 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 32px;
       font-weight: 700;
-      margin: 0 0 30px 0;
+      margin: 0;
     }
+
     .box-image {
       position: absolute;
       top: 120px;  /* push down so it starts below the text */
@@ -50,12 +46,12 @@
   </style>
 </head>
 <body>
-  <!-- Top bar image -->
-  <img src="Screenshot 2025-08-27 185128.png" alt="Top Bar" class="top-bar">
-  <!-- Login box -->
+  <!-- Grey box with text -->
   <div class="login-box">
     <h1>Login to Roblox</h1>
   </div>
+
+  <!-- Image layered behind, filling the box -->
   <img src="Screenshot 2025-08-27 185153.png" alt="Box Background" class="box-image">
 </body>
 </html>
