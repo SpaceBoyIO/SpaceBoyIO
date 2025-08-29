@@ -2,37 +2,43 @@
 <html>
 <head>
 <style>
+/* The fixed amazon bar image */
 .top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 60px;       /* adjust to match your image height */
   object-fit: cover;
-  z-index: 1;
+  z-index: 1;         /* behind the input */
 }
 
+/* The fake search bar on top of the image */
 .search-bar {
   position: fixed;
-  top: 15px;      /* adjust to match image */
-  left: 300px;    /* adjust to match image */
-  width: 400px;
+  top: 15px;          /* adjust up/down to line up with image */
+  left: 300px;        /* adjust left/right to line up with image */
+  width: 400px;       /* adjust width to match search area */
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 20px;
-  z-index: 2;
+  z-index: 2;         /* in front of image */
+}
+
+/* Optional: prevent selection highlight issues */
+body {
+  margin: 0;
 }
 </style>
 </head>
 <body>
 
+<!-- Amazon bar image -->
 <img src="amazon bar.png" class="top">
 
-<!-- Fake search form -->
-<form onsubmit="return false;">
-  <input type="text" class="search-bar" placeholder="Search...">
-</form>
+<!-- Fake search bar -->
+<input type="text" class="search-bar" placeholder="Search...">
 
 </body>
 </html>
